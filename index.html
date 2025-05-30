@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -958,11 +958,8 @@
             
             // Create a temporary link to trigger download
             const link = document.createElement('a');
-            link.href = 'data:application/pdf;base64,JVBERi0xLjQKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSPj4Kc3RyZWFtCnic' + 
-                        '0w3Cic+MTVVI5VIwUjBQMDQwUjBQMDIGsk0VzBTMFSwVjBTMFMwULIHsQo5CLgBQSwMECg' + 
-                        'AAAAAAh2w4RgAAAAAAAAAAAAAAAAAGABAAX3htbFVUCQADz8bWY8/G1mN1eAsAAQT1AQAAB' + 
-                        'PUDAAA=';
-            link.download = 'Taher-Ahmed-CV.pdf';
+            link.href = 'Taher_Ahmed_CV.pdf' ;
+            link.download = 'Taher_Ahmed_CV.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
