@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional graphic designer specializing in logo design, branding, and social media graphics. Explore Taher Ahmed’s creative portfolio." />
+    <meta name="keywords" content="Graphic Designer, Logo Design, Branding, Social Media Design, Visual Identity, Taher Ahmed" />
+    <meta name="author" content="Taher Ahmed" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taher Ahmed - Graphic Designer</title>
+    <title>Loading...</title>
+    <!-- <script>
+    // نفترض عندك متغير أو طريقة تحدد لغة المستخدم، مثلاً
+    // هنا مجرد مثال لاختيار اللغة يدوياً
+    let userLang = navigator.language || navigator.userLanguage; // يحدد لغة المتصفح
+
+    // لو عندك اختيار لغة في موقعك (عربي/انجليزي) استبدل userLang بالمتغير اللي يخزنها
+    // مثال: let userLang = "ar"; // أو "en"
+
+    if (userLang.startsWith('ar')) {
+      document.title = "طاهر أحمد | مصمم جرافيك - تصميم شعار وهوية";
+    } else {
+      document.title = "Taher Ahmed | Graphic Designer - Logo & Branding";
+    }
+    </script> -->
     <style>
         /* Reset and Base Styles */
         * {
@@ -14,27 +37,26 @@
         }
         
         :root {
-            --primary: #3498db;
-            --secondary: #2ecc71;
-            --text: #333;
-            --text-light: #777;
-            --bg: #f9f9f9;
-            --card-bg: #fff;
-            --nav-bg: rgba(255, 255, 255, 0.95);
-            --border: #eee;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --primary: #9C27B0; /* Magenta */
+        --secondary: #E91E63; /* Pink */
+        --text: #333;
+        --text-light: #777;
+        --bg: #f9f9f9;
+        --card-bg: #fff;
+        --nav-bg: rgba(255, 255, 255, 0.95);
+        --border: #eee;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         .dark-mode {
-            --primary: #4aa8ff;
-            --secondary: #3ddc84;
-            --text: #f0f0f0;
-            --text-light: #bbb;
-            --bg: #121212;
-            --card-bg: #1e1e1e;
-            --nav-bg: rgba(30, 30, 30, 0.95);
-            --border: #333;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        --primary: #E91E63; /* Bright pink/magenta */
+        --secondary: #9C27B0; /* Magenta */
+        --text: #f0f0f0;
+        --text-light: #bbb;
+        --bg: #121212; /* Dark grey */
+        --card-bg: #1e1e1e; /* Slightly lighter dark grey */
+        --nav-bg: rgba(30, 30, 30, 0.95);
+        --border: #333;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         
         body {
@@ -196,11 +218,11 @@
         
         /* Hero Section */
         #hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(233, 30, 99, 0.1) 100%);
         }
         
         .hero-content h1 {
@@ -342,6 +364,34 @@
             border-color: var(--primary);
         }
         
+        /* brief*/
+        .containerbr {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .br-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+
+            padding: 38px 50px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .br-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -588,6 +638,7 @@
                     <li><a href="#portfolio" class="nav-link" data-en="Portfolio" data-ar="أعمالي">Portfolio</a></li>
                     <li><a href="#services" class="nav-link" data-en="Services" data-ar="خدماتي">Services</a></li>
                     <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="تواصل معي">Contact</a></li>
+                    <li><a href="#Brief" class="nav-link" data-en="Brief" data-ar="بريف">Brief</a></li>
                     <li><a href="#" id="download-cv" class="nav-link" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</a></li>
                 </ul>
                 <div class="toggle-buttons">
@@ -628,7 +679,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <a href="PFP.jpg"><img src="https://i.ibb.co/3Y93dNH4/476433135-618328144463348-3871029358582870171-n.jpg" alt="476433135-618328144463348-3871029358582870171-n" border="0"></a>
+                    <a href="PFP.png"><img src="PFP.png" alt="476433135-618328144463348-3871029358582870171-n" border="0"></a>
                 </div>
             </div>
         </div>
@@ -720,7 +771,7 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 data-en="Designing Company" data-ar="شعار شركة تصميم">Designing Company</h3>
-                        <p data-en="A Logo inspierd by innovation and creativity beyond horizons" data-ar="شعار يحسد روح الابتكار. ويحلق باٍبداعه فوق حدود الافاق">A Logo inspierd by innovation and creativity beyond horizons</p>
+                        <p data-en="A Logo inspierd by innovation and creativity beyond horizons" data-ar="شعار يجسد روح الابتكار. ويحلق باٍبداعه فوق حدود الافاق">A Logo inspierd by innovation and creativity beyond horizons</p>
                         <a href="https://www.linkedin.com/posts/taher-ahmed-33649b278_graphicdesign-sketch-creative-activity-7291424731520471041-Wj0C?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO0FRoBUf5ZFttDIVrGwn1yY4DyhZMlmr8" target="_blank" data-en="View Project" data-ar="عرض المشروع">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -740,13 +791,47 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 data-en="Strawberry juice social media design" data-ar="اٍعلان سوشيال ميديا لعصير فراولة">Strawberry juice social media design</h3>
-                        <p data-en="Adobe photoshop traning" data-ar="اسكتش ادوبي فوتوشوب">Adobe photoshop traning.</p>
-                        <a href="" target="_blank" data-en="View Project" data-ar="عرض المشروع">View Project <i class="fas fa-arrow-right"></i></a>
+                        <p data-en="🎯Day 1 -Photoshop Daily Practice" data-ar="🎯Day 1 -Photoshop Daily Practice">Adobe photoshop traning.</p>
+                        <a href="https://www.linkedin.com/posts/taher-ahmed-33649b278_photoshopdesign-illustratorartist-graphicdesign-activity-7334458013396652032-R-h1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO0FRoBUf5ZFttDIVrGwn1yY4DyhZMlmr8" target="_blank" data-en="View Project" data-ar="عرض المشروع">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-img">
+                        <img src="ArabianOud.png">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 data-en="Arabian Oud" data-ar=" Arabian Oud">Arabian Oud</h3>
+                        <p data-en="🎯Day 2 -Photoshop Daily Practice" data-ar="🎯Day 2 -Photoshop Daily Practice"></p>
+                        <a href="https://www.linkedin.com/posts/taher-ahmed-33649b278_photoshop-illustrator-dailydesign-activity-7334987111693017088-uMJq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO0FRoBUf5ZFttDIVrGwn1yY4DyhZMlmr8" target="_blank" data-en="View Project" data-ar="عرض المشروع">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-img">
+                        <img src="V7CanEditUD.png">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 data-en="V7 Social Media AD" data-ar="V7 Social Media AD">V7 Social Media AD</h3>
+                        <p data-en="🎯Day 3 -Photoshop Daily Practice" data-ar="🎯Day 3 -Photoshop Daily Practice"></p>
+                        <a href="https://www.linkedin.com/posts/taher-ahmed-33649b278_aesaedaetaeyaet-aenaehaesaepaeu-adobephotoshop-activity-7335363434848444416-4v6N?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEO0FRoBUf5ZFttDIVrGwn1yY4DyhZMlmr8" target="_blank" data-en="View Project" data-ar="عرض المشروع">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Brief section -->
+    <section id="Brief">
+        <div class="containerbr">
+            <h2 class="section-title" data-en="Brief" data-ar="بريف">Brief</h2>
+            <div class="Brief-content">
+                <button id="d-ar" class="br-btn"  data-en="Download Brief(AR)" data-ar="تحميل البريف(عربي) ">Download Brief(AR)</button>
+                <button id="d-en" class="br-btn"  data-en="Download Brief(EN)" data-ar="تحميل البريف(اٍنجليزي) ">Download Brief(EN)</button>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact">
@@ -768,7 +853,7 @@
                     </div>
                     <div class="contact-text">
                         <h3 data-en="Email" data-ar="البريد الإلكتروني">Email</h3>
-                        <a href="taherxtaher123@gmail.com">taherxtaher123@gmail.com</a>
+                        <a href="taher.ahmed.w@gmail.com">taher.ahmed.w@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -803,10 +888,10 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                <a href="https://www.behance.net/taherahmed30" class="social-link"><i class="fab fa-behance"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/taher.ahmed.w12?igsh=MXRobDRpMjVzbXdrbg==" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/taher-ahmed-33649b278/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p>&copy; <span id="year"></span> Taher Ahmed. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
         </div>
@@ -935,11 +1020,34 @@
             
             // Create a temporary link to trigger download
             const link = document.createElement('a');
-            link.href = 'data:application/pdf;base64,JVBERi0xLjQKJcOkw7zDtsOfCjIgMCBvYmoKPDwvTGVuZ3RoIDMgMCBSPj4Kc3RyZWFtCnic' + 
-                        '0w3Cic+MTVVI5VIwUjBQMDQwUjBQMDIGsk0VzBTMFSwVjBTMFMwULIHsQo5CLgBQSwMECg' + 
-                        'AAAAAAh2w4RgAAAAAAAAAAAAAAAAAGABAAX3htbFVUCQADz8bWY8/G1mN1eAsAAQT1AQAAB' + 
-                        'PUDAAA=';
-            link.download = 'Taher-Ahmed-CV.pdf';
+            link.href = 'Taher_Ahmed_CV.pdf' ;
+            link.download = 'Taher_Ahmed_CV.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+        
+        // download brief button EN
+        document.getElementById('d-en').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Create a temporary link to trigger download
+            const link = document.createElement('a');
+            link.href = 'Brief-EN.pdf' ;
+            link.download = 'Brief-EN.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+        
+        // download brief button AR
+        document.getElementById('d-ar').addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Create a temporary link to trigger download
+            const link = document.createElement('a');
+            link.href = 'Brief-AR.pdf' ;
+            link.download = 'Brief-AR.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
